@@ -32,7 +32,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 ## ヒント
 
 <details>
-    <summary>ヒント開放</summary>
+    <summary>clip to expand</summary>
 
 - Playbook実行結果に文字列を出力する場合は、debugモジュールを使用します  
   <https://docs.ansible.com/ansible/latest/modules/debug_module.html>
@@ -44,7 +44,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 ## 解答
 
 <details>
-    <summary>解答、オープン！！！！！！！！</summary>
+    <summary>clip to expand</summary>
 
 ### コード
 
@@ -89,6 +89,8 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
     - 今回はこの中の `msg` というパラメータを使用しています
 
 </details>
+
+## Navigation
 
 [前：1-1. 環境の確認](../1-1_setup/README.md)  
 [次：1-3. TBD](../1-3)  

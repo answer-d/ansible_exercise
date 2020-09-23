@@ -23,6 +23,8 @@ IPアドレスは自環境のものを使用して下さい。
 - インベントリファイル作成
 - ad-hocコマンドの実行
 
+## Navigation
+
 [次：1-2. はじめてのPlaybook](../1-2_first-playbook/README.md)  
 
 [Top](../README.md)  
