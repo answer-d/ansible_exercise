@@ -89,3 +89,8 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
     - 今回はこの中の `msg` というパラメータを使用しています
 
 </details>
+
+[前：1-1. 環境の確認](../1-1_setup/README.md)  
+[次：1-3. TBD](../1-3)  
+
+[Top](../README.md)  

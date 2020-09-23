@@ -16,9 +16,13 @@ IPアドレスは自環境のものを使用して下さい。
 
 ## 準備
 
-**OneNote参照**
+**OneNote参照**  
 
 - ログイン確認
 - code-serverセットアップ
 - インベントリファイル作成
 - ad-hocコマンドの実行
+
+[次：1-2. はじめてのPlaybook](../1-2_first-playbook/README.md)  
+
+[Top](../README.md)  
