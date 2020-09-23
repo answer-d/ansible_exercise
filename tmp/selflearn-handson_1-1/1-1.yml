@@ -1,0 +1,7 @@
+---
+- name: linuxグループセットアップ
+  hosts: linux
+  tasks:
+    - name: 実行開始通知
+      debug:
+        msg: Playbookの実行を開始します

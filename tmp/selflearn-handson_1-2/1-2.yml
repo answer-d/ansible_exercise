@@ -1,0 +1,7 @@
+---
+- name: linuxグループセットアップ
+  hosts: linux
+  tasks:
+    - name: 実行開始通知
+      debug:
+        msg: "{{ ansible_host }}に対してPlaybookの実行を開始します"
