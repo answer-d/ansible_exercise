@@ -60,7 +60,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
         msg: Playbookの実行を開始します
 ```
 
-[raw file](./1-2_first_playbook/)  
+[raw file](./answer/)  
 
 ### 解説
 
