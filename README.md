@@ -16,3 +16,5 @@ IaCには以下の要件が求められています。
 - [1-1. 環境の確認](1-1_setup/README.md)
 - [1-2. はじめてのPlaybook](1-2_first-playbook/README.md)
 - [1-3. 変数を使ってみよう](1-3_variable/README.md)
+- [1-4. 具体的な処理を実行してみよう](1-4_essential-playbook/README.md)
+- [1-5. 変数を使ったサーバごとの処理](1-5_host-vars/README.md)

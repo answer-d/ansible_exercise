@@ -1,0 +1,7 @@
+[linux]
+target_lin1 ansible_host=192.168.250.237
+target_lin2 ansible_host=192.168.159.104
+
+[linux:vars]
+ansible_user=ansible
+ansible_password=ansible

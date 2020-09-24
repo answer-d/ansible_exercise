@@ -8,7 +8,7 @@
 ## 実行結果例
 
 ```console
-$ ansible-playbook -i inventory 1-1.yml
+$ ansible-playbook -i inventory setup.yml
 
 PLAY [linuxグループセットアップ] ***************************************************************************
 
@@ -48,6 +48,9 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
   <https://docs.ansible.com/ansible/latest/modules/debug_module.html>
 - `ansible debug` 」などで検索することで、日本語で書かれた情報も見つけることができます  
   OSSを扱う場合、ググり能力は非常に大切です、積極的にググっていきましょう
+- Playbook実行時にエラーが発生した場合は、エラーとなった処理に出ているログの `msg` を確認すると原因が書いてあることがあります
+- なお環境は異なりますが、以下のハンズオンドキュメントがPlaybookの基礎を学ぶにあたって大いに参考になります  
+  [Ansible Workshop - Ansible for Red Hat Enterprise Linux](https://github.com/ansible/workshops/blob/master/exercises/ansible_rhel/README.ja.md)
 
 </details>
 
@@ -58,7 +61,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 
 ### コード
 
-#### 1-1.yml
+#### setup.yml
 
 ```yaml
 ---
@@ -90,7 +93,8 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 
     |キー|意味|
     |:--|:--|
-    |hosts|タスクを実行する対象のホストグループやホストを示す。今回はlinuxグループを実行対象に指定している|
+    |name|PlayやTaskの名前の定義、実行時に出力される|
+    |hosts|タスクを実行する対象のホストグループやホスト。今回はlinuxグループを実行対象に指定している|
     |tasks|Ansibleモジュールを呼び出し、必要なオプションを渡すことで実行される操作のリスト。<br>モジュールに与えるオプションは、モジュール名の下の行に **段を下げて** 記述する|
 
 - nameタグは無くても動きます。が、実行結果の可視性を高く保つためになるべく付けることをオススメします
@@ -102,7 +106,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 
 ## Navigation
 
-[前：1-1. 環境の確認](../1-1_setup/README.md)  
-[次：1-3. TBD](../1-3)  
+前：[1-1. 環境の確認](../1-1_setup/README.md)  
+次：[1-3. 変数を使ってみよう](../1-3_variable/README.md)  
 
 [Top](../README.md)  
