@@ -34,6 +34,16 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 <details>
     <summary>clip to expand</summary>
 
+- Playbookの全体像は以下のような形になります。★部分を埋めてみましょう  
+
+    ```yaml
+    ---
+    - name: linuxグループセットアップ
+      hosts: ★
+      tasks:
+        - ★
+    ```
+
 - Playbook実行結果に文字列を出力する場合は、debugモジュールを使用します  
   <https://docs.ansible.com/ansible/latest/modules/debug_module.html>
 - `ansible debug` 」などで検索することで、日本語で書かれた情報も見つけることができます  
