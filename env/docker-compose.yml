@@ -1,0 +1,14 @@
+version: '3'
+services:
+  ansible_host:
+    image: answerd/ansible_host:centos_7
+    volumes:
+      - ../:/repo
+    working_dir: /repo
+    privileged: true
+  target_lin1:
+    image: answerd/ansible_target:centos_7
+    privileged: true
+  target_lin2:
+    image: answerd/ansible_target:centos_7
+    privileged: true
