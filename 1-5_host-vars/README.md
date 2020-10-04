@@ -135,6 +135,6 @@ app_dir_name: poyo
 ## Navigation
 
 前：[1-4. 具体的な処理を実行してみよう](../1-4_essential-playbook/README.md)  
-次：
+次：[1-6. ファイルコピー(copyモジュール)](../1-6_copy-module/README.md)
 
 [Top](../README.md)  
