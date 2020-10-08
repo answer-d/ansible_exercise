@@ -20,3 +20,4 @@ IaCには以下の要件が求められています。
 - [1-5. 変数を使ったサーバごとの処理](1-5_host-vars/README.md)
 - [1-6. ファイルコピー(copyモジュール)](1-6_copy-module/README.md)
 - [1-7. ファイルコピー(templateモジュール)](1-7_template-module/README.md)
+- [1-8. ロールを使ってみよう](1-8_role/README.md)

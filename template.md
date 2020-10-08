@@ -39,7 +39,7 @@ hogehoge
 
 ## Navigation
 
-前：
-次：
+前：  
+次：  
 
 [Top](../README.md)  

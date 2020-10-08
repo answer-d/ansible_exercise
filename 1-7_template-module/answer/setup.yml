@@ -1,0 +1,26 @@
+---
+- name: linuxグループセットアップ
+  hosts: linux
+  tasks:
+    - name: 実行開始通知
+      debug:
+        msg: "{{ ansible_host }}に対してPlaybookの実行を開始します"
+
+    - name: workディレクトリ作成
+      become: true
+      file:
+        path: /nec_work
+        mode: "777"
+        state: directory
+
+    - name: AP用ディレクトリ作成
+      file:
+        path: /nec_work/{{ app_dir_name }}
+        mode: "770"
+        state: directory
+
+    - name: hosts配布
+      become: true
+      template:
+        src: ./hosts.j2
+        dest: /etc/hosts

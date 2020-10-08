@@ -3,7 +3,7 @@
 ## 問題
 
 名前解決はhostsによって行うようです。  
-以下のホスト名とIPアドレスを解決可能なとなるようhostsファイルを **静的に** (ファイルの内容が固定的)作成し、  
+以下のホスト名とIPアドレスを解決可能なとなるようhostsファイルを **静的に** (=ファイルの内容が固定的に) 作成し、  
 `target_lin1` と `target_lin2` の `/etc/hosts` として配布して下さい。  
 
 ## 実行結果例
@@ -46,6 +46,7 @@ target_lin2                : ok=5    changed=1    unreachable=0    failed=0    s
     <summary>clip to expand</summary>
 
 - 静的なファイルのコピーには [copyモジュール](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html) を使用します
+- hostsファイルの元ネタをターゲットサーバからsshやscpなどで取得してファイルを作成しましょう
 
 </details>
 
@@ -112,13 +113,13 @@ target_lin2                : ok=5    changed=1    unreachable=0    failed=0    s
 
 ### 解説
 
-- TBD
+- hostsファイルの所有者はrootですので、 `become` で特権昇格が必要です
 
 </details>
 
 ## Navigation
 
 前：[1-5. 変数を使ったサーバごとの処理](../1-5_host-vars/README.md)  
-次：  
+次：[1-7. ファイルコピー(templateモジュール)](1-7_template-module/README.md)  
 
 [Top](../README.md)  
