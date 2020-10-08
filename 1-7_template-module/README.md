@@ -15,6 +15,35 @@ copyモジュールによって行っていたhostsファイルの配布処理�
 ## 実行結果例
 
 ```console
+PLAY [linuxグループセットアップ] *************************************************************************************************************
+
+TASK [Gathering Facts] *************************************************************************************************************
+ok: [target_lin2]
+ok: [target_lin1]
+
+TASK [実行開始通知] **********************************************************************************************************************
+ok: [target_lin1] => {
+    "msg": "172.30.0.2に対してPlaybookの実行を開始します"
+}
+ok: [target_lin2] => {
+    "msg": "172.30.0.3に対してPlaybookの実行を開始します"
+}
+
+TASK [workディレクトリ作成] ****************************************************************************************************************
+ok: [target_lin1] => {"changed": false, "gid": 0, "group": "root", "mode": "0777", "owner": "root", "path": "/nec_work", "size": 4096, "state": "directory", "uid": 0}
+ok: [target_lin2] => {"changed": false, "gid": 0, "group": "root", "mode": "0777", "owner": "root", "path": "/nec_work", "size": 4096, "state": "directory", "uid": 0}
+
+TASK [AP用ディレクトリ作成] *****************************************************************************************************************
+ok: [target_lin1] => {"changed": false, "gid": 1000, "group": "ansible", "mode": "0770", "owner": "ansible", "path": "/nec_work/hoge", "size": 4096, "state": "directory", "uid": 1000}
+ok: [target_lin2] => {"changed": false, "gid": 1000, "group": "ansible", "mode": "0770", "owner": "ansible", "path": "/nec_work/poyo", "size": 4096, "state": "directory", "uid": 1000}
+
+TASK [hosts配布] *********************************************************************************************************************
+ok: [target_lin1] => {"changed": false, "checksum": "823980a35777b84d563c534123cf6a28a8ce1615", "dest": "/etc/hosts", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/etc/hosts", "size": 73, "state": "file", "uid": 0}
+ok: [target_lin2] => {"changed": false, "checksum": "823980a35777b84d563c534123cf6a28a8ce1615", "dest": "/etc/hosts", "gid": 0, "group": "root", "mode": "0644", "owner": "root", "path": "/etc/hosts", "size": 73, "state": "file", "uid": 0}
+
+PLAY RECAP *************************************************************************************************************************
+target_lin1                : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+target_lin2                : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 ## ヒント
