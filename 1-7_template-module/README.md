@@ -8,9 +8,9 @@
 - 環境(本番環境/ステージング環境/開発環境)が複数存在するシステムの場合、環境ごとにファイルを用意する必要がある
 - サーバ台数やIPアドレスが変化した場合、インベントリファイルだけでなくhostsファイルも更新しなければならない
 
-copyモジュールによって行っていたhostsファイルの配布処理の部分を修正し、  
+そこで、copyモジュールによって行っていたhostsファイルの配布処理の部分を修正し、  
 インベントリファイルに記載されているホストのすべてに対する名前解決が可能なhostsファイルを **動的に** 作成し、  
-`target_lin1` と `target_lin2` の `/etc/hosts` として配布するように実装して下さい。  
+`target_lin1` と `target_lin2` の `/etc/hosts` として配布するように実装を修正して下さい。  
 
 ## 実行結果例
 
@@ -53,13 +53,14 @@ target_lin2                : ok=5    changed=0    unreachable=0    failed=0    s
 
 - 動的なファイルのコピーには [templateモジュール](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html) を使用します
 - 配布対象となるファイルは、 [Jinja2テンプレート](https://jinja.palletsprojects.com/en/2.11.x/) という形式で記述します  
-     Ansible以外にも、例えば有名なWebアプリケーションフレームワークでにおいて動的にhtmlを生成する部分などで使用されている文法です  
-     [このあたり](https://jinja.palletsprojects.com/en/2.11.x/templates/) が利用者向けのドキュメントです。  
-     少々わかりにくい面もあるので、 [てくなべブログ](https://tekunabe.hatenablog.jp/entry/2019/03/03/ansible_template_intro) も参考にすると良いでしょう
-- hostsファイルの作成時は、「ターゲットノード以外のIPアドレス」を参照する必要がでてくると思いますが、  
+  この形式はAnsible独自のものではなく、例えば[Django](https://docs.djangoproject.com/ja/3.1/)のような有名なWebアプリケーションフレームワークで動的にhtmlを生成する部分などで使用されている文法およびテンプレートエンジンです  
+  Jinja2テンプレートの利用者向けドキュメントは[このあたり](https://jinja.palletsprojects.com/en/2.11.x/templates/) です。  
+  が、少々わかりにくい面があるので、 [てくなべブログ](https://tekunabe.hatenablog.jp/entry/2019/03/03/ansible_template_intro) などの情報も参考にすると良いでしょう
+    - ちなみに変数を参照するときに出てきた `{{ variable1 }}` のような記法は実はJinja2テンプレートです。Ansible PlaybookではJinja2テンプレートを文法として使用されているということですね
+- hostsファイルの作成時は、「実行対象となっているターゲットノード以外のIPアドレス」を参照する必要がでてくると思いますが、  
   このような場合、 [マジック変数](https://docs.ansible.com/ansible/2.9_ja/user_guide/playbooks_variables.html#magic-variables-and-hostvars) が利用できます
-    - 今回の場合は、 `hostvars` や `groups` を使えばやりたいことが実現できそうです
-        - 「`hostvars` にどんな値が入っているのか分からない！」という場合は、テンプレートに変数をそのまま出してみたり、debugモジュールを用いることで中身を確認してみましょう
+    - 今回の場合は、 `hostvars` や `groups` を使えばやりたいことが実現できます
+        - 「`hostvars` にどんな値が入っているのか分からない！」という場合は、テンプレートに `{{ hostvars }}` と書くことで変数をまるごと出してみたり、debugモジュールを用いるなどして中身を確認してみるのが良いでしょう
 
 </details>
 
@@ -137,13 +138,13 @@ target_lin2                : ok=5    changed=0    unreachable=0    failed=0    s
     ```
 
 - 解答に示したj2テンプレートであれば、サーバ台数が変化した場合でもインベントリファイルにホストの情報を追加するだけで対応できます
-    - 実PJで利用するにあたっては、汎用性を確保できる一方でテンプレートの内容が複雑になる点も考慮し、メンバーのスキルに応じてどこまで自動化するか検討しましょう
+- 実PJで利用するにあたっては、汎用性を確保できる一方でテンプレートの内容が複雑になる点も考慮し、メンバーのスキルに応じてどこまで自動化するか検討しましょう
 
 </details>
 
 ## Navigation
 
-前：[1-6. ファイルコピー(copyモジュール)](1-6_copy-module/README.md)  
-次：[1-8. ロールを使ってみよう](1-8_role/README.md)
+前：[1-6. ファイルコピー(copyモジュール)](../1-6_copy-module/README.md)  
+次：[1-8. ロールを使ってみよう](../1-8_role/README.md)  
 
 [Top](../README.md)  

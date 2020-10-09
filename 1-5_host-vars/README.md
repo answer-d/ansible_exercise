@@ -125,16 +125,16 @@ app_dir_name: poyo
 ### 解説
 
 - インベントリで変数を提供するための推奨される方法は、 `host_vars` と `group_vars` という2つのディレクトリにあるファイルにそれらを定義することです
-    - たとえば、グループ `servers` の変数を定義するために、変数名が付けられたYAMLファイル `group_vars/servers` を作成します
-    - また、特定ホスト `node1` 専用の変数を定義するために、変数定義を含む `node1` ファイル `host_vars/node1` を作成します
+    - たとえば、グループ `servers` の変数を定義するためには、YAMLファイル(あるいはディレクトリ) `group_vars/servers` を作成します
+    - また、特定ホスト `node1` 専用の変数を定義するためには、YAMLファイル(あるいはディレクトリ) `host_vars/node1` を作成します
 - 今回のディレクトリ作成はansibleユーザの権限範囲にて実施できるため、 `become` ディレクティブは無くてもOKです
-    - もちろん入れてあっても問題ありません。その場合はfileモジュールのパラメータ `owner` や `group` でディレクトリの属性を指定しましょう
+    - もちろん入れてあっても問題ありません。その場合はfileモジュールのパラメータ `owner` や `group` でディレクトリの属性を指定してあげましょう
 
 </details>
 
 ## Navigation
 
 前：[1-4. 具体的な処理を実行してみよう](../1-4_essential-playbook/README.md)  
-次：[1-6. ファイルコピー(copyモジュール)](../1-6_copy-module/README.md)
+次：[1-6. ファイルコピー(copyモジュール)](../1-6_copy-module/README.md)  
 
 [Top](../README.md)  

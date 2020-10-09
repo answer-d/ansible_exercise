@@ -49,7 +49,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 - `ansible debug` 」などで検索することで、日本語で書かれた情報も見つけることができます  
   OSSを扱う場合、ググり能力は非常に大切です、積極的にググっていきましょう
 - Playbook実行時にエラーが発生した場合は、エラーとなった処理に出ているログの `msg` を確認すると原因が書いてあることがあります
-- なお環境は異なりますが、以下のハンズオンドキュメントがPlaybookの基礎を学ぶにあたって大いに参考になります  
+- なお環境は異なりますが、以下のハンズオンドキュメントがPlaybookの基礎を学ぶにあたっておおいに参考になります  
   [Ansible Workshop - Ansible for Red Hat Enterprise Linux](https://github.com/ansible/workshops/blob/master/exercises/ansible_rhel/README.ja.md)
 
 </details>

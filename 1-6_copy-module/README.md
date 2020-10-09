@@ -120,6 +120,6 @@ target_lin2                : ok=5    changed=1    unreachable=0    failed=0    s
 ## Navigation
 
 前：[1-5. 変数を使ったサーバごとの処理](../1-5_host-vars/README.md)  
-次：[1-7. ファイルコピー(templateモジュール)](1-7_template-module/README.md)  
+次：[1-7. ファイルコピー(templateモジュール)](../1-7_template-module/README.md)  
 
 [Top](../README.md)  
