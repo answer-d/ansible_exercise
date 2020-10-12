@@ -74,13 +74,12 @@ target_lin2                : ok=5    changed=0    unreachable=0    failed=0    s
 #### ファイル構成
 
 ```plain
-.
-├── host_vars
-│   ├── target_lin1.yml
-│   └── target_lin2.yml
-├── hosts.j2
-├── inventory
-└── setup.yml
+│  hosts.j2
+│  setup.yml
+│
+└─host_vars
+        target_lin1.yml
+        target_lin2.yml
 ```
 
 #### setup.yml
@@ -124,7 +123,7 @@ target_lin2                : ok=5    changed=0    unreachable=0    failed=0    s
 {% endfor %}
 ```
 
-[raw file](./answer/)  
+[回答例の実ファイルはこちら](./answer/)  
 
 ### 解説
 

@@ -29,7 +29,7 @@ hogehoge
 ```yaml
 ```
 
-[raw file](./answer/)  
+[回答例の実ファイルはこちら](./answer/)  
 
 ### 解説
 

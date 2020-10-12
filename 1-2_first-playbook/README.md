@@ -61,6 +61,12 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 
 ### コード
 
+#### ファイル構成
+
+```plain
+    setup.yml
+```
+
 #### setup.yml
 
 ```yaml
@@ -73,7 +79,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
         msg: Playbookの実行を開始します
 ```
 
-[raw file](./answer/)  
+[回答例の実ファイルはこちら](./answer/)  
 
 ### 解説
 

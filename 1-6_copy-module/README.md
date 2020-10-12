@@ -60,13 +60,12 @@ target_lin2                : ok=5    changed=1    unreachable=0    failed=0    s
 #### ファイル構成
 
 ```plain
-.
-├── host_vars
-│   ├── target_lin1.yml
-│   └── target_lin2.yml
-├── hosts
-├── inventory
-└── setup.yml
+│  hosts
+│  setup.yml
+│
+└─host_vars
+        target_lin1.yml
+        target_lin2.yml
 ```
 
 #### setup.yml
@@ -109,7 +108,7 @@ target_lin2                : ok=5    changed=1    unreachable=0    failed=0    s
 192.168.159.104 target_lin2
 ```
 
-[raw file](./answer/)  
+[回答例の実ファイルはこちら](./answer/)  
 
 ### 解説
 

@@ -20,7 +20,19 @@ IPアドレスは自環境のものを使用して下さい。
 
 - ログイン確認
 - code-serverセットアップ
-- インベントリファイル作成
+- インベントリファイル作成  
+  以降、以下のインベントリファイルが作成されている想定となります(回答例にも含まれないので注意)  
+
+    ```ini
+    [linux]
+    target_lin1 ansible_host=<Target Lin#1のIPアドレス>
+    target_lin2 ansible_host=<Target Lin#2のIPアドレス>
+
+    [linux:vars]
+    ansible_user=ansible
+    ansible_password=ansible
+    ```
+
 - ad-hocコマンドの実行
 
 ## Navigation

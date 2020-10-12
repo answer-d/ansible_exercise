@@ -72,8 +72,6 @@ target_lin2                : ok=4    changed=0    unreachable=0    failed=0    s
 #### ファイル構成
 
 ```plain
-.
-│  inventory
 │  setup.yml
 │
 └─host_vars
@@ -120,7 +118,7 @@ app_dir_name: hoge
 app_dir_name: poyo
 ```
 
-[raw file](./answer/)  
+[回答例の実ファイルはこちら](./answer/)  
 
 ### 解説
 

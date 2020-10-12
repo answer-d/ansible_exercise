@@ -79,18 +79,19 @@ target_lin2                : ok=5    changed=0    unreachable=0    failed=0    s
 #### ファイル構成
 
 ```plain
-.
-├── host_vars
-│   ├── target_lin1.yml
-│   └── target_lin2.yml
-├── inventory
-├── roles
-│   └── common_setting
-│       ├── tasks
-│       │   └── main.yml
-│       └── templates
-│           └── hosts.j2
-└── setup.yml
+│  setup.yml
+│
+├─host_vars
+│      target_lin1.yml
+│      target_lin2.yml
+│
+└─roles
+    └─common_setting
+        ├─tasks
+        │      main.yml
+        │
+        └─templates
+                hosts.j2
 ```
 
 #### setup.yml
@@ -158,7 +159,7 @@ app_dir_name: hoge
 app_dir_name: poyo
 ```
 
-[raw file](./answer/)  
+[回答例の実ファイルはこちら](./answer/)  
 
 ### 解説
 
@@ -171,10 +172,10 @@ app_dir_name: poyo
 
         ```yaml
         - name: hosts配布
-        become: true
-        template:
-          src: hosts.j2
-          dest: /etc/hosts
+          become: true
+          template:
+            src: hosts.j2
+            dest: /etc/hosts
         ```
 
     - 同様に `copy` モジュールを使用する場合は、同ロール内の `files` ディレクトリが暗黙的な解決先となります
@@ -184,6 +185,6 @@ app_dir_name: poyo
 ## Navigation
 
 前：[1-7. ファイルコピー(templateモジュール)](1-7_template-module/README.md)  
-次：なし (基礎編はこれで終わりです)
+次：なし (基礎編はこれで終わりです)  
 
 [Top](../README.md)  

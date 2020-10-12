@@ -1,7 +1,0 @@
-[linux]
-target_lin1
-target_lin2
-
-[linux:vars]
-ansible_user=ansible
-ansible_password=ansible
