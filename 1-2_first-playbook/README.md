@@ -46,7 +46,7 @@ target_lin2                : ok=2    changed=0    unreachable=0    failed=0    s
 
 - Playbook実行結果に文字列を出力する場合は、debugモジュールを使用します  
   <https://docs.ansible.com/ansible/latest/modules/debug_module.html>
-- `ansible debug` 」などで検索することで、日本語で書かれた情報も見つけることができます  
+- `ansible debug` などで検索することで、日本語で書かれた情報も見つけることができます  
   OSSを扱う場合、ググり能力は非常に大切です、積極的にググっていきましょう
 - Playbook実行時にエラーが発生した場合は、エラーとなった処理に出ているログの `msg` を確認すると原因が書いてあることがあります
 - なお環境は異なりますが、以下のハンズオンドキュメントがPlaybookの基礎を学ぶにあたっておおいに参考になります  
